@@ -277,6 +277,7 @@ return(print( paste("Masa Proteína: ", masa_proteina)))
 Masa_proteina()
 
 #AAAAAAH, no sé porqué da solo lo del primerooo
+      #Solo da el del primer aa  que detecta :c
 
 #G + A + S + P + V + T + C + I + L + N + D + Q + K + E + M + F + R + Y + W
 
