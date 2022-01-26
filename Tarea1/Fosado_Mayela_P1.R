@@ -97,7 +97,9 @@ Secuencia_complemento <- function (Secuencia) {
   respuesta <- 1
   
   while(respuesta == 1){
-    respuesta <- readline(prompt = "Ingresa una secuencia de 10 nucleótidos de DNA: ")
+    respuesta <- readline(prompt = "Ingresa una secuencia de 10 nucleótidos de DNA: ") # Escribir la secuencia que se va a utilizar
+  
+    #Crear un objeto para cada nucleotido
     uno <- 0
     dos <- 0
     tres <- 0
@@ -109,64 +111,65 @@ Secuencia_complemento <- function (Secuencia) {
     nueve <- 0
     diez <- 0
     
-    if(substr(respuesta, start = 1, stop = 1) == "A"){uno <- "T"
+    if(substr(respuesta, start = 1, stop = 1) == "A"){uno <- "T" #checa el primer nucleotido, y de acuerdo al que sea asigna la letra
     }else if(substr(respuesta, start = 1, stop = 1) == "T"){uno <- "A"
     }else if(substr(respuesta, start = 1, stop = 1) == "G"){uno <- "C"
     }else if(substr(respuesta, start = 1, stop = 1) == "C"){uno <- "G"}
     
-    if(substr(respuesta, start = 2, stop = 2) == "A"){dos <- "T"
+    if(substr(respuesta, start = 2, stop = 2) == "A"){dos <- "T" #checa el segundo nucleotido, y de acuerdo al que sea asigna la letra
     }else if(substr(respuesta, start = 2, stop = 2) == "T"){dos <- "A"
     }else if(substr(respuesta, start = 2, stop = 2) == "G"){dos <- "C"
     }else if(substr(respuesta, start = 2, stop = 2) == "C"){dos <- "G"} 
     
-    if(substr(respuesta, start = 3, stop = 3) == "A"){tres <- "T"
+    if(substr(respuesta, start = 3, stop = 3) == "A"){tres <- "T" #checa el tercer nucleotido, y de acuerdo al que sea asigna la letra
     }else if(substr(respuesta, start = 3, stop = 3) == "T"){tres <- "A"
     }else if(substr(respuesta, start = 3, stop = 3) == "G"){tres <- "C"
     }else if(substr(respuesta, start = 3, stop = 3) == "C"){tres <- "G"}
     
-    if(substr(respuesta, start = 4, stop = 4) == "A"){cuatro <- "T"
+    if(substr(respuesta, start = 4, stop = 4) == "A"){cuatro <- "T" #checa el cuarto nucleotido, y de acuerdo al que sea asigna la letra
     }else if(substr(respuesta, start = 4, stop = 4) == "T"){cuatro <- "A"
     }else if(substr(respuesta, start = 4, stop = 4) == "G"){cuatro <- "C"
     }else if(substr(respuesta, start = 4, stop = 4) == "C"){cuatro <- "G"}
     
-    if(substr(respuesta, start = 5, stop = 5) == "A"){cinco <- "T"
+    if(substr(respuesta, start = 5, stop = 5) == "A"){cinco <- "T" #checa el quinto nucleotido, y de acuerdo al que sea asigna la letra
     }else if(substr(respuesta, start = 5, stop = 5) == "T"){cinco <- "A"
     }else if(substr(respuesta, start = 5, stop = 5) == "G"){cinco <- "C"
     }else if(substr(respuesta, start = 5, stop = 5) == "C"){cinco <- "G"}
     
-    if(substr(respuesta, start = 6, stop = 6) == "A"){seis <- "T"
+    if(substr(respuesta, start = 6, stop = 6) == "A"){seis <- "T" #checa el sexto nucleotido, y de acuerdo al que sea asigna la letra
     }else if(substr(respuesta, start = 6, stop = 6) == "T"){seis <- "A"
     }else if(substr(respuesta, start = 6, stop = 6) == "G"){seis <- "C"
     }else if(substr(respuesta, start = 6, stop = 6) == "C"){seis <- "G"}
     
-    if(substr(respuesta, start = 7, stop = 7) == "A"){siete <- "T"
+    if(substr(respuesta, start = 7, stop = 7) == "A"){siete <- "T" #checa el septimo nucleotido, y de acuerdo al que sea asigna la letra
     }else if(substr(respuesta, start = 7, stop = 7) == "T"){siete <- "A"
     }else if(substr(respuesta, start = 7, stop = 7) == "G"){siete <- "C"
     }else if(substr(respuesta, start = 7, stop = 7) == "C"){siete <- "G"} 
     
-    if(substr(respuesta, start = 8, stop = 8) == "A"){ocho <- "T"
+    if(substr(respuesta, start = 8, stop = 8) == "A"){ocho <- "T" #checa el octavo nucleotido, y de acuerdo al que sea asigna la letra
     }else if(substr(respuesta, start = 8, stop = 8) == "T"){ocho <- "A"
     }else if(substr(respuesta, start = 8, stop = 8) == "G"){ocho <- "C"
     }else if(substr(respuesta, start = 8, stop = 8) == "C"){ocho <- "G"}
     
-    if(substr(respuesta, start = 9, stop = 9) == "A"){nueve <- "T"
+    if(substr(respuesta, start = 9, stop = 9) == "A"){nueve <- "T" #checa el noveno nucleotido, y de acuerdo al que sea asigna la letra
     }else if(substr(respuesta, start = 9, stop = 9) == "T"){nueve <- "A"
     }else if(substr(respuesta, start = 9, stop = 9) == "G"){nueve <- "C"
     }else if(substr(respuesta, start = 9, stop = 9) == "C"){nueve <- "G"} 
     
-    if(substr(respuesta, start = 10, stop = 10) == "A"){diez <- "T"
+    if(substr(respuesta, start = 10, stop = 10) == "A"){diez <- "T" #checa el decimo nucleotido, y de acuerdo al que sea asigna la letra
     }else if(substr(respuesta, start = 10, stop = 10) == "T"){diez <- "A"
     }else if(substr(respuesta, start = 10, stop = 10) == "G"){diez <- "C"
     }else if(substr(respuesta, start = 10, stop = 10) == "C"){diez <- "G"} 
     
-    print(paste("Secuencia complementaria:", paste0(uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez)))
-    respuesta <- readline(prompt = "¿Quieres probar con otra secuencia (Sí=1, No=0)  ")
+    print(paste("Secuencia complementaria:", paste0(uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez))) # imprime los 10 objetos de cada nucleotido y genera la secuencia complementaria
+    respuesta <- readline(prompt = "¿Quieres probar con otra secuencia (Sí=1, No=0)  ")  # Anotar la respuesta de si se quiere continuar con otra secuencia
     respuesta <- as.numeric(respuesta)
   }
 }
 
 Secuencia_complemento()
 
+      # Este es exclusivamente para secuencias de 10 nucleotidos
 
 # TOTAL DE C Y G ----
 
@@ -285,7 +288,14 @@ Masa_proteina()
 
 
 
-
+      
+      
+      
+      
+      
+      
+      
+#------------------------------------------------------------------------------------------------------------------------------------------------------
    #Estos fueron intentos fallidos tratando de probar con todas las secuencias juntas u otro metodo para la cadena complementaria y la masa de proteinas
   
 # INTENTOS FALLIDOS ----
